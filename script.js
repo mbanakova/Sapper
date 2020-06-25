@@ -4,7 +4,7 @@ let running = null;
 
 let columns = 20;
 let rows = 20;
-let mines = 10;
+let mines = 20;
 
 let skills = document.getElementsByName('difficulty');
 
