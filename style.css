@@ -1,0 +1,187 @@
+.game {
+    position: relative;
+    margin: 30px 100px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+#app {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.sapper {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #032636;
+    background-color: rgb(22, 40, 90);
+}
+
+.sapper div {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+.controls {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size,
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px 10px 0;
+}
+
+.field,
+.skill {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.label {
+    position: relative;
+    padding: 0 0 15px 40px;
+    color: rgb(22, 40, 90);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.label::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: 0;
+    width: 20px;
+    height: 21px;
+    border: 4px solid rgb(22, 40, 90);
+    background-color: rgb(255, 0, 191);
+    border-radius: 4px;
+}
+
+.label::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 7px;
+    width: 14px;
+    height: 14px;
+    z-index: 5;
+    background-color: rgb(22, 40, 90);
+    border-radius: 3px;
+    display: none;
+}
+
+.field:checked + .label::after,
+.skill:checked + .label::after {
+    display: block;
+  }
+
+.restart {
+    padding: 15px 25px;
+    border: 2px solid #032636;
+    border-radius: 8px;
+    background-color: rgb(22, 40, 90);
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+
+.restart:hover {
+    background-color: rgb(255, 0, 191);
+    transition: 0.2s ease-in-out;
+}
+
+.restart:active {
+    background-color: #113e7e;
+    transition: 0.2s ease-in-out;
+}
+
+.sapper img {
+    width: 20px;
+    height: 20px;
+}
+
+.sapper img:hover {
+    opacity: 0.9;
+    transition: 0.2s ease-in-out;
+}
+
+.sapper img:active {
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+}
+
+.gameover {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.win {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.close::before {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: -2px;
+    width: 50px;
+    height: 8px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.close::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: -2px;
+    width: 50px;
+    height: 8px;
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.close:hover::before,
+.close:hover::after {
+    box-shadow: 0 0 8px 1px white;
+    transition: 0.2s ease-in-out;
+}
+
+.close:active::before,
+.close:active::after {
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+
+.appear {
+    display: block;
+}
