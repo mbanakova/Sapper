@@ -1,21 +1,29 @@
 let matrix = null;
 let running = null;
 
-
-let columns = 20;
-let rows = 20;
-let mines = 35;
-
+let width = document.getElementById('width');
+let height = document.getElementById('height');
 let skills = document.getElementsByName('difficulty');
+
+let columns = width.value;
+let rows = height.value;
+let mines = height.value;
+
+width.onchange = function() {
+    columns = width.value;
+}
+
+height.onchange = function() {
+    rows = height.value;
+}
 
 for (let i = 0; i < skills.length; i++) {
     skills[i].onchange = minesNum;
 }
 
 function minesNum() {
-    mines = this.value;
+    mines = Math.round(columns * rows /10 * this.value);
 }
-
 
 init(columns, rows, mines);
 
@@ -33,6 +41,7 @@ function init (columns, rows, mines) {
 
     update();
 }
+
 
 let closeWin = document.querySelector('.close.youwin');
 let win = document.querySelector('.win');

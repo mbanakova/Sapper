@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <title>Sapper</title>
     <link rel="stylesheet" href="style.css">
 <head>
@@ -9,25 +9,25 @@
 </head>
 <body class="game">
     <form class="controls" action="https://echo.htmlacademy.ru" method="get">
-        <!-- <p class="size">
-            <input class="field" type="radio" name="size" value="10" id="small" checked>
-            <label class="label" for="small">10x10</label>
-
-            <input class="field" type="radio" name="size" value="20" id="medium">
-            <label class="label" for="medium">20x20</label>
-
-            <input class="field" type="radio" name="size" value="40" id="large">
-            <label class="label" for="large">40x25</label>
-        </p> -->
+        <div class="size">
+            <p class="width">
+            <input class="field-width" type="number" value="15" min="5" max="40" step="5" id="width">
+            <label class="label-width" for="width">Width</label>
+            </p>
+            <p class="height">
+            <input class="field-height" type="number" value="15" min="5" max="25" step="5" id="height">
+            <label class="label-height" for="height">Height</label>
+            </p>
+        </div>
 
         <p class="difficulty">
-            <input class="skill" type="radio" name="difficulty" value="20" id="easy">
+            <input class="skill" type="radio" name="difficulty" value="1" id="easy" checked>
             <label class="label" for="easy">Easy</label>
         
-            <input class="skill" type="radio" name="difficulty" value="35" id="average" checked>
+            <input class="skill" type="radio" name="difficulty" value="1.5" id="average">
             <label class="label" for="average">Average</label>
         
-            <input class="skill" type="radio" name="difficulty" value="50" id="hard">
+            <input class="skill" type="radio" name="difficulty" value="2.5" id="hard">
             <label class="label" for="hard">Hard</label>
         </p>
 
