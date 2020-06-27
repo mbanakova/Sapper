@@ -7,7 +7,7 @@ let skills = document.getElementsByName('difficulty');
 
 let columns = width.value;
 let rows = height.value;
-let mines = height.value;
+let mines = Math.round(width.value * height.value / 15);
 
 width.onchange = function() {
     columns = width.value;
@@ -22,7 +22,7 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 function minesNum() {
-    mines = Math.round(columns * rows /10 * this.value);
+    mines = Math.round(columns * rows / 10 * this.value);
 }
 
 init(columns, rows, mines);
